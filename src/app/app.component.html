@@ -1,3 +1,203 @@
 <div class="container">
-  <h1>Gowtham</h1>
+  <div class="row">
+    <div class="col header">
+      <h4>Reactive Form Example</h4>
+    </div>
+  </div>
+  <div class="body">
+    <form [formGroup]="registerReactiveForm" #userData="ngForm">
+      <div class="row">
+        <div class="col-5">
+          <label class="form-label">First Name:</label>&nbsp;
+          <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            placeholder="First Name"
+            formControlName="firstName"
+          /><br />
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <label class="form-label">Last Name:</label>&nbsp;
+          <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            placeholder="Last Name"
+            formControlName="lastName"
+          /><br />
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <label class="form-label">E-Mail:</label>&nbsp;
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="E-Mail"
+            formControlName="email"
+          /><br />
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <label class="form-label">Phone Number:</label>&nbsp;
+          <input
+            type="number"
+            class="form-control"
+            id="phoneNumber"
+            placeholder="Phone Number"
+            formControlName="phoneNumber"
+          /><br />
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <label class="form-label">Company:</label>&nbsp;
+          <input
+            type="text"
+            class="form-control"
+            id="company"
+            placeholder="Company"
+            formControlName="company"
+          /><br />
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        Gender:
+        <div class="col form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="gender"
+            id="male"
+            value="male"
+          />
+          <label class="form-check-label" for="flexRadioDefault1"> Male </label>
+        </div>
+        <div class="col form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="gender"
+            id="female"
+            value="female"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Female
+          </label>
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col">
+          <form action="/action_page.php">
+            <label for="birthday">Birthday:</label>&nbsp;
+            <input type="date" id="birthday" name="birthday" />
+          </form>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-5">
+          <label class="form-label">Password:</label>&nbsp;
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+            formControlName="password"
+          /><br />
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <label class="form-label">Confirm Password:</label>&nbsp;
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+            formControlName="confirmPassword"
+          /><br />
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn">Add</button>&nbsp;
+
+          <button type="button" class="btn" (ngSubmit)="onSubmit(userData)">
+            Register</button
+          >&nbsp;
+
+          <button type="button" class="btn">Cancel</button>&nbsp;
+        </div>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone No.</th>
+                <th scope="col">Company</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Akhil</td>
+                <td>Kumar</td>
+                <td>akhil@gmail.com</td>
+                <td>9959515110</td>
+                <td>BuzzBoard</td>
+                <td>14-03-1991</td>
+                <td><button type="button" class="btn">Edit</button></td>
+                <td><button type="button" class="btn">Delete</button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Rahul</td>
+                <td>Dev</td>
+                <td>rahul@gmail.com</td>
+                <td>8923193993</td>
+                <td>Infosys</td>
+                <td>09-07-1990</td>
+                <td><button type="button" class="btn">Edit</button></td>
+                <td><button type="button" class="btn">Delete</button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Sampath</td>
+                <td>Kumar</td>
+                <td>sam@gmail.com</td>
+                <td>9703037744</td>
+                <td>Cognizant</td>
+                <td>27-06-1989</td>
+                <td><button type="button" class="btn">Edit</button></td>
+                <td><button type="button" class="btn">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

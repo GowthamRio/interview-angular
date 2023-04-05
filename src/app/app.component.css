@@ -1,0 +1,20 @@
+.header {
+  background-color: #ffd93d;
+  width: 800px;
+  text-align: center;
+  padding: 1px;
+}
+
+.body {
+  background-color: #f6f1e9;
+  width: 800px;
+  padding: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
